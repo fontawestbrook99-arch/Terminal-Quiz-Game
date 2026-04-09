@@ -69,7 +69,7 @@ echo "------------------------------------------------"
 echo ""
 echo "*******END OF QUIZ *******"
 echo "---------------------"
-      mapfile -t question < <( shuf "$question_file"
+      mapfile -t question < <( shuf "$question_file")
 echo "------------------------------------------------"
 for question_data in "${question[@]}"; do
     IFS='|' read -r question opt_a opt_b opt_c opt_d correct <<< "$question_data"
