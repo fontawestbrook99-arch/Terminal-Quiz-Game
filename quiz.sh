@@ -14,12 +14,11 @@ fi
 echo "********PRACTICE MODE******"
 echo "-----------./QUIZ.SH----------"
    echo "-----------QUIZ GAME----------"
-   echo " All answer bnot paet of the option will invalide"
+   echo " All answer not part of the option will invalide"
+   echo "ANSWER TO ALL QUESTION"
    read -rp "enter username: " name
-   echo "NAME: $name" >> highscore.txt
    date=$(date +%d-%m-%Y)
    echo " date: $date"
-   echo " DATE: $date" >> highscore.txt
    mapfile -t question < <( shuf "$question_file")
 echo "------------------------------------------------"
 for question_data in "${question[@]}"; do
@@ -54,6 +53,7 @@ for question_data in "${question[@]}"; do
    echo "------------------------------------------------"
    read -rp "press enter to continue"
 done
+echo "NAME: $name DATE: $date SCORE: $score% " >> highscore.txt
 total_quest=$((Ans_correct+Ans_incorrect))
 echo "QUESTION NUMBER: $question_num"
 echo "total question ask: $total_quest"
@@ -63,27 +63,11 @@ echo "longest correct streak: $max_streak"
 echo "current_streak: $Ans_correct"
 score=$((Ans_correct*100/total_quest))
 echo "Score: $score%"
-echo "$Ans_correct/$total_quest" >> highscore.txt
-echo "SCORE: $score%" >> highscore.txt
 echo "------------------------------------------------"
 echo ""
 echo "*******END OF QUIZ *******"
 echo "---------------------"
-      mapfile -t question < <( shuf "$question_file")
-echo "------------------------------------------------"
-for question_data in "${question[@]}"; do
-    IFS='|' read -r question opt_a opt_b opt_c opt_d correct <<< "$question_data"
-    echo -e "\nQuestion: $question"
-    echo "$opt_a"
-    echo "$opt_b"
-    echo "$opt_c"
-    echo "$opt_d"
-    echo -n "enter your answer (A/B/C/D) : "
-    read -r user_answer
-     if [[ "${user_answer^^}" == "${correct^^}" ]]; then
-        echo "Correct! ($user_answer)"     
-     else
-        echo "Incorrect  the correct answer was $correct"
-     fi
-    echo "------------------------------------------------"
-done
+top_high=$(
+    sort -t: -k2 -nr highscore.txt | head -n 5
+)
+echo "TOP 5 HIGHSCORE : $top_high" >> highscore.txt
