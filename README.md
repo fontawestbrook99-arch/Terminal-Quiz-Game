@@ -1,7 +1,7 @@
 # Terminal Quiz Game
 this is a script that give a  simulation of an examination MCQs test
 
-##  problem statement
+## problem statement
 
 Many small school in Cameroon manage in storing students academic scores manually and in order , leading to inadequete storage of student performance affecting it performance
 
