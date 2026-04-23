@@ -7,23 +7,34 @@ question_file=question.txt
 question_num=0
 if [[ ! -f "$question_file" ]];then
    echo "erro: $question_file not found"
+   exit 1
 fi
 if [[ ! -s "$question_file" ]];then
-   echo "erro: $question_file not found"
+   echo "erro: $question_file not empty"
+   exit 1
 fi
-echo "********PRACTICE MODE******"
-echo "-----------./QUIZ.SH----------"
-   echo "-----------QUIZ GAME----------"
-   echo " All answer not part of the option will invalide"
-   echo "ANSWER TO ALL QUESTION"
+
+if [[ "$1" == "practice" ]]; then
+   echo "  practice mode enabled  "
+elif [[ "$1" == "highscores" ]]; then
+   echo "  highscores mode enabled  "
+   cat highscore.txt
+   exit 0
+else
+   echo "  normal mode enabled  "
+fi
+   echo "      All answer not part of the option will invalide"
+   echo "              ANSWER TO ALL QUESTION                  "
+   echo "    "
    read -rp "enter username: " name
-   date=$(date +%d-%m-%Y)
+   date=$(date)
    echo " date: $date"
    mapfile -t question < <( shuf "$question_file")
 echo "------------------------------------------------"
 for question_data in "${question[@]}"; do
    IFS='|' read -r question opt_a opt_b opt_c opt_d correct <<< "$question_data"
    while true; do
+   echo "question $((question_num+1)) of ${#question[@]}"   
          echo -e "\nQuestion: $question"
          echo "$opt_a"
          echo "$opt_b"
@@ -53,7 +64,7 @@ for question_data in "${question[@]}"; do
    echo "------------------------------------------------"
    read -rp "press enter to continue"
 done
-echo "NAME: $name DATE: $date SCORE: $score% " >> highscore.txt
+echo "NAME: $name DATE: $date SCORE: $score " >> highscore.txt
 total_quest=$((Ans_correct+Ans_incorrect))
 echo "QUESTION NUMBER: $question_num"
 echo "total question ask: $total_quest"
@@ -68,6 +79,5 @@ echo ""
 echo "*******END OF QUIZ *******"
 echo "---------------------"
 top_high=$(
-    sort -t: -k2 -nr highscore.txt | head -n 5
+    sort highscore.txt -k4 -n -r | head -n 5
 )
-echo "TOP 5 HIGHSCORE : $top_high" >> highscore.txt

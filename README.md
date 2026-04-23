@@ -29,7 +29,7 @@ Many small school in Cameroon manage in storing students academic scores manuall
 
 ## 📷 Screenshots
 
-![alt text](assets/Screenshot%20from%202026-04-10%2015-21-28.png)
+![alt text](<assets/Pasted image.png>)
 
 ## ⚙ Installation & Setup
 

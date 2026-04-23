@@ -1,15 +1,15 @@
-1. what is the capital of brasil ?|A) yaounde|B) seoul|C) muscou|D) brasillia|D
-2. what is the capital of russia ?|A) yaounde|B) seoul|C) muscou|D) brasillia|C
-3. what is the capital of chine ?|A) yaounde|B) seoul|C) muscou|D) Beijing|D
-4. what is the capital of korea south ?|A) yaounde|B) seoul|C) muscou|D) brasillia|B
-5. what is the capital of cameroon ?|A) yaounde|B) seoul|C) muscou|D) brasillia|A
-6. the president of russia ?|A) volodymyyr zelensky |B) kim jong un|C) vladimir putin|D) jae-myung|C
-7. the president of chine  ?|A) enamuelle madron|B) kim jong un|C) paul biya|D)jae-myung|D
-8. the president of france ?|A) enamuelle madron|B) kim jong un|C) paul biya|D)jae-myung|A
-9.  the president of south korea ?|A) enamuelle madron|B) kim jong un|C) paul biya|D) jae-myung|B 
-10. the president of cameroon ?|A) xi jimping|B) emanuelle madron|C) samuelle etoo|D) paul biya|D
-11. the planet with a ring ?|A) mercury|B) earth|C) neptune|D) mars|C
-12. the largest ocean ?|A) mediterannea|B) indian|C) atlantic|D) pacific|D
-13. the speed of darkness ?|A) none|B) 3*10^8m/s|C) 300km/s|D) 3*10^7m/s|B
-14. the speed of ligth ?|A) 300km/h|B) 3*10^8m/s|C) 3*10^7km/s|D) 3*10^8km/s|B
-15. what is the speed of sound ?|A) 360m/s|B) 340m/s|C) 350m/s|D) 320m/s|B
+ what is the capital of brasil ?|A) yaounde|B) seoul|C) muscou|D) brasillia|D
+ what is the capital of russia ?|A) yaounde|B) seoul|C) muscou|D) brasillia|C
+ what is the capital of chine ?|A) yaounde|B) seoul|C) muscou|D) Beijing|D
+ what is the capital of korea south ?|A) yaounde|B) seoul|C) muscou|D) brasillia|B
+ what is the capital of cameroon ?|A) yaounde|B) seoul|C) muscou|D) brasillia|A
+ the president of russia ?|A) volodymyyr zelensky |B) kim jong un|C) vladimir putin|D) jae-myung|C
+ the president of chine  ?|A) enamuelle madron|B) kim jong un|C) paul biya|D)jae-myung|D
+ the president of france ?|A) enamuelle madron|B) kim jong un|C) paul biya|D)jae-myung|A
+ the president of south korea ?|A) enamuelle madron|B) kim jong un|C) paul biya|D) jae-myung|B 
+ the president of cameroon ?|A) xi jimping|B) emanuelle madron|C) samuelle etoo|D) paul biya|D
+ the planet with a ring ?|A) mercury|B) earth|C) neptune|D) mars|C
+ the largest ocean ?|A) mediterannea|B) indian|C) atlantic|D) pacific|D
+ the speed of darkness ?|A) none|B) 3*10^8m/s|C) 300km/s|D) 3*10^7m/s|B
+ the speed of ligth ?|A) 300km/h|B) 3*10^8m/s|C) 3*10^7km/s|D) 3*10^8km/s|B
+ what is the speed of sound ?|A) 360m/s|B) 340m/s|C) 350m/s|D) 320m/s|B
