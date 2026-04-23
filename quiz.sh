@@ -18,6 +18,7 @@ if [[ "$1" == "practice" ]]; then
    echo "  practice mode enabled  "
 elif [[ "$1" == "highscores" ]]; then
    echo "  highscores mode enabled  "
+   sort -k11,11nr -k5,8 highscore.txt -o highscore.txt
    cat highscore.txt
    exit 0
 else
@@ -78,6 +79,4 @@ echo "------------------------------------------------"
 echo ""
 echo "*******END OF QUIZ *******"
 echo "---------------------"
-top_high=$(
-    sort highscore.txt -k4 -n -r | head -n 5
-)
+
