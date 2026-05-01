@@ -5,6 +5,7 @@ Ans_incorrect=0
 max_streak=0
 question_file=question.txt
 question_num=0
+practice_mode=false
 if [[ ! -f "$question_file" ]];then
    echo "erro: $question_file not found"
    exit 1
@@ -16,6 +17,7 @@ fi
 
 if [[ "$1" == "practice" ]]; then
    echo "  practice mode enabled  "
+   practice_mode=true
 elif [[ "$1" == "highscores" ]]; then
    echo "  highscores mode enabled  "
    sort -k11,11nr -k5,8 highscore.txt -o highscore.txt
@@ -27,9 +29,13 @@ fi
    echo "      All answer not part of the option will invalide"
    echo "              ANSWER TO ALL QUESTION                  "
    echo "    "
+   if $practice_mode; then
+   echo "Practice mode"
+   else
    read -rp "enter username: " name
    date=$(date)
    echo " date: $date"
+   fi
    mapfile -t question < <( shuf "$question_file")
 echo "------------------------------------------------"
 for question_data in "${question[@]}"; do
@@ -65,6 +71,9 @@ for question_data in "${question[@]}"; do
    echo "------------------------------------------------"
    read -rp "press enter to continue"
 done
+if $practice_mode; then
+echo "practice mode completed"
+else
 echo "NAME: $name DATE: $date SCORE: $score " >> highscore.txt
 total_quest=$((Ans_correct+Ans_incorrect))
 echo "QUESTION NUMBER: $question_num"
@@ -77,6 +86,7 @@ score=$((Ans_correct*100/total_quest))
 echo "Score: $score%"
 echo "------------------------------------------------"
 echo ""
+fi
 echo "*******END OF QUIZ *******"
 echo "---------------------"
 
